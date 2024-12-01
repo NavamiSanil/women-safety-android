@@ -1,5 +1,4 @@
-package com.vinayak09.wsafety;
-
+package com.navami.kavach;
 import android.Manifest;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -20,6 +19,9 @@ import com.github.tbouron.shakedetector.library.ShakeDetector;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
+
+import java.util.Objects;
+
 public class ServiceMine extends Service {
 
     boolean isRunning = false;
@@ -40,8 +42,7 @@ public class ServiceMine extends Service {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
+
             // here to request the missing permissions, and then overriding
             //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
             //                                          int[] grantResults)
@@ -74,7 +75,7 @@ public class ServiceMine extends Service {
             SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
             String ENUM = sharedPreferences.getString("ENUM","NONE");
             if(!ENUM.equalsIgnoreCase("NONE")){
-                manager.sendTextMessage(ENUM,null,"Im in Trouble!\nSending My Location :\n"+myLocation,null,null);
+                manager.sendTextMessage(ENUM,null,"This is Navami!\n Im in Trouble!\nSending My Location :\n"+myLocation,null,null);
             }
 
         });
@@ -88,7 +89,7 @@ public class ServiceMine extends Service {
 
 
 
-            if (intent.getAction().equalsIgnoreCase("STOP")) {
+            if (Objects.requireNonNull(intent.getAction()).equalsIgnoreCase("STOP")) {
                 if(isRunning) {
                     this.stopForeground(true);
                     this.stopSelf();

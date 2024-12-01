@@ -1,0 +1,172 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_surface"
+    android:padding="16dp">
+
+    <!-- Title -->
+
+    <ImageView
+        android:id="@+id/menuSafety"
+        android:layout_width="36dp"
+        android:layout_height="39dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:contentDescription="@string/menu_icon_desc"
+        android:focusable="true"
+        android:src="@drawable/baseline_home_24" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/guidelines"
+        android:textColor="@color/black"
+        android:textSize="22sp" /> <!-- Changed to Roboto font -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Self-Defense Tips -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/self"
+                android:textColor="#A44B31"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/_1_always_stay_aware_of_your_surroundings_n2_carry_a_pepper_spray_or_a_whistle_for_emergencies_n3_take_a_self_defense_class_and_learn_basic_defense_moves_n4_trust_your_instincts_if_something_feels_wrong_act_immediately"
+
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Legal Rights (Indian Context) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/legal"
+                android:textColor="#A44B31"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_1_women_have_the_right_to_file_an_fir_at_any_police_station_n2_legal_protection_is_available_under_the_domestic_violence_act_2005_n3_you_can_call_1091_the_women_s_helpline_for_immediate_support_n4_right_to_free_legal_aid_if_needed"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Emergency Advice -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="Emergency Advice"
+                android:textColor="#A44B31"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_1_in_case_of_emergency_dial_112_n2_if_you_feel_threatened_immediately_send_an_sos_message_through_your_phone_s_built_in_sos_feature_n3_share_your_location_with_trusted_contacts_or_on_social_media_to_alert_others"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Video Tutorials -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/watch_safety_videos"
+                android:textColor="#A44B31"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/videoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#2e2133"
+                android:text="@string/watch"
+                android:textColor="@color/white" />
+
+            <!-- Emergency Contacts with Rounded Boxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal">
+
+                <!-- Police Contact -->
+                <Button
+                    android:id="@+id/PoliceButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#2e2133"
+
+                    android:text="@string/police_100"
+                    android:textColor="@color/white" />
+
+                <!-- Ambulance Contact -->
+                <Button
+                    android:id="@+id/ambulanceButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#E6C48F"
+                    android:text="@string/ambulance_108"
+                    android:textColor="#2e2133"
+                    android:onClick="dialAmbulance" />
+
+
+                <!-- Women Protection -->
+                <Button
+                    android:id="@+id/WomenProtection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#2e2133"
+
+                    android:text="@string/women_helpline_1091"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

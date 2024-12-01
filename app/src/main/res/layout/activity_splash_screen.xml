@@ -4,31 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img1"
     tools:context=".SplashScreen">
 
-    <ImageView
-        android:id="@+id/girlVector"
-        android:layout_width="130dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/girl_vector"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
+    <!-- Boxed Layout for the Text -->
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Feel Safe Everywhere"
-        android:fontFamily="@font/varela_round"
-        android:textSize="28sp"
-        android:layout_below="@id/girlVector"
-        app:layout_constraintTop_toBottomOf="@id/girlVector"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:backgroundTint="#80FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_centerHorizontal="true"/>
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624">
 
+        <!-- TextView Inside the Box -->
+        <TextView
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/varela_round"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Kavach-For Women by Women"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

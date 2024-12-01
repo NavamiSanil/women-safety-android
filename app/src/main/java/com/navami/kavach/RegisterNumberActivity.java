@@ -1,4 +1,4 @@
-package com.vinayak09.wsafety;
+package com.navami.kavach;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SirenActivity">
+
+    <!-- Main Content Area -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Menu Icon -->
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="@string/menu_icon"
+            android:focusable="true"
+            android:src="@drawable/baseline_home_24" />
+
+
+
+        <ImageView
+            android:id="@+id/sirenImage"
+            android:layout_width="308dp"
+            android:layout_height="247dp"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:contentDescription="@string/siren_icon_desc"
+            android:focusable="true"
+            android:src="@drawable/siren_icon" />
+
+
+    </RelativeLayout>
+
+    <!-- Sidebar (Navigation Drawer) -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#f9e7ce"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f9e7ce"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/profile_icon"
+                android:src="@drawable/woman" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/playfair"
+                android:text="@string/hello_user"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dashboardOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/dashboard_icon"
+                android:src="@drawable/ic_dashboard"
+                app:tint="#2e2133" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:text="@string/dashboard_ic"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <!-- Change Emergency Contact Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/change_emergency_contact"
+                android:src="@drawable/ic_change_number"
+                app:tint="#2e2133" />
+
+            <TextView
+                android:id="@+id/changeNumberOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:gravity="start"
+                android:text="@string/change_emergency_contact"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- View News Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/view_news"
+                android:src="@drawable/news"
+                app:tint="#2e2133" />
+
+            <TextView
+                android:id="@+id/viewnews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:gravity="start"
+                android:text="@string/news"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <!-- Siren Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/siren"
+                android:src="@drawable/siren"
+                app:tint="#2e2133" />
+
+            <TextView
+                android:id="@+id/siren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:gravity="start"
+                android:text="@string/siren_ic"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- Settings Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/settings_icon"
+                android:src="@drawable/ic_settings"
+                app:tint="#2e2133" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:text="@string/settings"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Logout Option -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:contentDescription="@string/logout_icon"
+                android:src="@drawable/ic_logout"
+                app:tint="#2e2133" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/playfair"
+                android:text="@string/logout"
+                android:textColor="#2e2133"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,4 +1,4 @@
-package com.vinayak09.wsafety;
+package com.navami.kavach;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        new CountDownTimer(1000,500){
+        new CountDownTimer(2000,500){
             @Override
             public void onTick(long millisUntilFinished) {
 
